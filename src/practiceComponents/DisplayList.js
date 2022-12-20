@@ -10,14 +10,10 @@ const DisplayList = () => {
       <h1 className="text-3xl font-semibold">Display List</h1>
       <table className="relative mt-2 m-auto shadow-lg bg-white">
         <thead>
-          <tr className="text-center">
-            <th className="bg-blue-100 border text-left px-8 py-4">
-              FIRST NAME
-            </th>
-            <th className="bg-blue-100 border text-left px-8 py-4">
-              LAST NAME
-            </th>
-            <th className="bg-blue-100 border text-left px-8 py-4">EMAIL</th>
+          <tr className="text-center bg-blue-100">
+            <th className=" border text-left px-8 py-4">FIRST NAME</th>
+            <th className="border text-left px-8 py-4">LAST NAME</th>
+            <th className="border text-left px-8 py-4">EMAIL</th>
           </tr>
         </thead>
         <tbody>
