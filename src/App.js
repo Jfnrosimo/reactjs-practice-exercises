@@ -5,6 +5,7 @@ import "./App.css";
 import SearchFilter from "./practiceComponents/SearchFilter";
 import Counter from "./practiceComponents/Counter";
 import DisplayList from "./practiceComponents/DisplayList";
+import Slider from "./practiceComponents/slider/Slider";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <SearchFilter />
       <Counter />
       <DisplayList />
+      <Slider />
     </div>
   );
 };
