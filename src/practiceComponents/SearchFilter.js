@@ -8,6 +8,7 @@ import mockData from "../data/MOCK_DATA.json";
 import "./SearchFilter.css";
 
 const SearchFilter = () => {
+  // const [searchItem, setSearchItem] = useState("");
   const [searchItem, setSearchItem] = useState("");
 
   return (
@@ -19,12 +20,19 @@ const SearchFilter = () => {
         placeholder="Search..."
         onChange={(e) => setSearchItem(e.target.value)}
       />
-      {mockData.filter((item) => {
-        if (searchItem === "") {
-          return item;
-        } else {
-        }
-      })}
+      {mockData
+        .filter((item) => {
+          if (searchItem === "") {
+            return item;
+          } else if (
+            item.first_name.toLowerCase().includes(searchItem.toLowerCase())
+          ) {
+            return item;
+          }
+        })
+        .map((item, index) => {
+          return index < 15 && <div>{item.first_name}</div>;
+        })}
     </div>
   );
 };
