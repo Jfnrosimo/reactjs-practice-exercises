@@ -27,7 +27,7 @@ const SearchFilter = () => {
           }
         })
         .map((item, index) => {
-          return index < 15 && <div>{item.first_name}</div>;
+          return index < 15 && <div key={item.email}>{item.first_name}</div>;
         })}
     </div>
   );
