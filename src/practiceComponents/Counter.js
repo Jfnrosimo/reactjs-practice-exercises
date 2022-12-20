@@ -1,21 +1,32 @@
 import { useState } from "react";
 
-//Import css
-import "./Counter.css";
-
 const Counter = () => {
-  // const [count, setCount] = useState(0);
   const [count, setCount] = useState(0);
+
   return (
-    <div className="counter-wrapper">
-      <h1>Simple Counter</h1>
-      <h2 className={count < 0 ? "negative" : count > 0 ? "positive" : "zero"}>
+    <div className="text-center border border-slate-500 m-2 p-5">
+      <h1 className="text-3xl font-semibold">Counter</h1>
+      <h2
+        className={`text-7xl mb-4 ${
+          count > 0 ? "text-green-500" : count < 0 ? "text-red-500" : null
+        }`}
+      >
         {count}
       </h2>
-      <div className="button-wrapper">
-        <button onClick={() => setCount(count - 1)}>-</button>
-        <button onClick={() => setCount(count + 1)}>+</button>
-      </div>
+      <button
+        className="mx-2 px-2 border border-slate-600"
+        type="button"
+        onClick={() => setCount(count - 1)}
+      >
+        -
+      </button>
+      <button
+        className="mx-2 px-2 border border-slate-600"
+        type="button"
+        onClick={() => setCount(count + 1)}
+      >
+        +
+      </button>
     </div>
   );
 };
