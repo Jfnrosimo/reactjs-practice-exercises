@@ -6,6 +6,7 @@ import SearchFilter from "./practiceComponents/SearchFilter";
 import Counter from "./practiceComponents/Counter";
 import DisplayList from "./practiceComponents/DisplayList";
 import Slider from "./practiceComponents/slider/Slider";
+import LoginApp from "./practiceComponents/loginForm/LoginApp";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Counter />
       <DisplayList />
       <Slider />
+      <LoginApp />
     </div>
   );
 };
