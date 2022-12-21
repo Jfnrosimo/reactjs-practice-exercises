@@ -27,6 +27,8 @@ const Slider = () => {
     }
   };
 
+  const moveDot = (index) => setSlideIndex(index);
+
   return (
     <div className="py-5 border border-slate-500 m-2">
       <h1 className="text-center text-3xl font-semibold">Slider</h1>
@@ -48,6 +50,14 @@ const Slider = () => {
         })}
         <BtnSlider moveSlide={prevSlide} direction={"prev"} />
         <BtnSlider moveSlide={nextSlide} direction={"next"} />
+        <div className="container-dots">
+          {Array.from({ length: 5 }).map((item, index) => (
+            <div
+              onClick={() => moveDot(index + 1)}
+              className={slideIndex === index + 1 ? "dot active" : "dot"}
+            ></div>
+          ))}
+        </div>
       </div>
     </div>
   );
