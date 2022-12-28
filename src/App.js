@@ -7,6 +7,7 @@ import Counter from "./practiceComponents/Counter";
 import DisplayList from "./practiceComponents/DisplayList";
 import Slider from "./practiceComponents/slider/Slider";
 import LoginApp from "./practiceComponents/loginForm/LoginApp";
+import APIRequest from "./practiceComponents/APIRequest";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <DisplayList />
       <Slider />
       <LoginApp />
+      <APIRequest />
     </div>
   );
 };
